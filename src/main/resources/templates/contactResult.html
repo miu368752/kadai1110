@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>送信完了</title>
+</head>
+<body>
+  <h1>お問い合わせ送信完了</h1>
+
+  <p>以下の内容で受け付けました：</p>
+  <ul>
+    <li>お名前：<span th:text="${contact.name}"></span></li>
+    <li>メールアドレス：<span th:text="${contact.email}"></span></li>
+    <li>電話番号：<span th:text="${contact.phone}"></span></li>
+    <li>件名：<span th:text="${contact.subject}"></span></li>
+    <li>お問い合わせ内容：<span th:text="${contact.message}"></span></li>
+  </ul>
+
+  <p><a th:href="@{/contact/form}">戻る</a></p>
+  <p><a th:href="@{/contact/list}">一覧を見る</a></p>
+</body>
+</html>
