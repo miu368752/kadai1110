@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>送信完了</title>
+  <link rel="stylesheet" th:href="@{/css/contactForm.css}">
 </head>
 <body>
   <h1>お問い合わせ送信完了</h1>
@@ -16,7 +17,7 @@
     <li>お問い合わせ内容：<span th:text="${contact.message}"></span></li>
   </ul>
 
-  <p><a th:href="@{/contact/form}">戻る</a></p>
+  <p><a th:href="@{/contact}">戻る</a></p>
   <p><a th:href="@{/contact/list}">一覧を見る</a></p>
 </body>
 </html>

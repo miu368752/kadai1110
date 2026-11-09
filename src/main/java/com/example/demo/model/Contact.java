@@ -1,29 +1,19 @@
 package com.example.demo.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-
-/**
- * 永続化用のドメインオブジェクト
- * DB保存を想定（JPA Entity）
- */
-@Entity
+// データを保持するモデルクラス
 public class Contact {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
     private String name;
     private String email;
     private String phone;
     private String subject;
     private String message;
 
+    // コンストラクタ
     public Contact() {}
 
+    // 値をセットするコンストラクタ
     public Contact(String name, String email, String phone, String subject, String message) {
         this.name = name;
         this.email = email;
@@ -32,6 +22,7 @@ public class Contact {
         this.message = message;
     }
 
+    // --- Getter / Setter ---
     public Long getId() {
         return id;
     }
